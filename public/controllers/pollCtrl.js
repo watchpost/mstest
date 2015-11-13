@@ -30,11 +30,20 @@ app.controller('pollCtrl', ['$scope', '$routeParams', 'pollService', function ($
 				objMostVotes = option;
 			}
 			option.mostVotes = false;
-			option.percent = Math.round(option.votes / poll.total * 100);
+			if(option.votes == 0){
+				option.percent = 0;
+			}else{
+				option.percent = Math.round(option.votes / poll.total * 100);	
+			}
+			
 		});
 
-		objMostVotes.mostVotes = true;
+		if(poll.total != 0){
+			objMostVotes.mostVotes = true;
+		}
+		
 	}
+
 
 	$scope.loadPoll($routeParams.id)
 

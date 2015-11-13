@@ -1,0 +1,18 @@
+.poll-title{
+	font-size:40px;
+}
+
+.poll-option-name{
+	font-size:30px; 
+	color:lightgrey;
+}
+
+.poll-option-success{
+	font-size:30px;
+	color:green;
+}
+
+.poll-option-error{
+	font-size:30px;
+	color:red;
+}

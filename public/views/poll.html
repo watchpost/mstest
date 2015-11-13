@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="col-xs-12 text-center">
+		<div class="row">
+			<span class="poll-title">{{ poll.title }}</span>
+		</div>
+		<div class="row">
+			<div class="col-xs-6" ng-repeat="option in poll.options">
+				<span class="poll-option-name">{{ option.name }}</span><br />
+				<img src="../images/{{option.img}}"><br />
+				<span ng-class="(option.mostVotes == true) ? 'poll-option-success' : 'poll-option-error'">{{ option.percent }}%</span><br />
+				<div class="btn btn-success" ng-click="vote(option)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Vote</div>
+			</div>
+		</div>
+	</div>
+</div>
